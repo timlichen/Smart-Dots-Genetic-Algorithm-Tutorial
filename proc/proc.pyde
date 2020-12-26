@@ -8,7 +8,7 @@ def setup():
     frameRate(100)
     
     goal = PVector(400, 10)
-    test = Population(500)
+    test = Population(1000)
 
     
 def draw():
