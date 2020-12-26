@@ -14,18 +14,19 @@ class Brain():
             self.directions.append(PVector.fromAngle(randomAngle))
     
     def clone(self):
-        clone = Brain(self.size)
-        clone.directions = self.directions
+        clone = Brain(1000)
+        clone.directions = [x for x in self.directions]
         return clone
     
     def mutate(self):
         mutationRate = 0.01
-        for i in range(self.size):
+        for i in range(len(self.directions)):   
             rand = random(1)
             if rand < mutationRate:
                 randomAngle = random(2*math.pi)
-                directions[i] = PVector.fromAngle(randomAngle)
+                self.directions[i] = PVector.fromAngle(randomAngle)
+                           
                 
         
         
-            
+                   
